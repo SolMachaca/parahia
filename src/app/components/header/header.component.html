@@ -1,0 +1,43 @@
+<nav class="navbar bg-dark navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="" [routerLink]="['page1']">Page 1</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="" [routerLink]="['pagea']"><i class="bi bi-music-note-beamed"></i> Deezer</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="" [routerLink]="['pageb']"><i class="bi bi-currency-dollar"></i> Conversor de
+            Divisas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="" [routerLink]="['pagec']"><i class="bi bi-moon"></i> Signos del Zodiaco</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="" [routerLink]="['youtube']"><i class="bi bi-youtube"></i> Youtube</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="" [routerLink]="['peliculas']"><i class="bi bi-film"></i> Peliculas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="" [routerLink]="['movie']"><i class="bi bi-film"></i> Movies</a>
+        </li>
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="" [routerLink]="['libro']"><i class="bi bi-film"></i> Libro</a>
+        </li> -->
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="" [routerLink]="['detalles-pelicula']"><i class="bi bi-film"></i> Movies Info</a>
+        </li> -->
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" name="text"  placeholder="Search" [(ngModel)]="text">
+        <!-- <input [(ngModel)]="text" placeholder="Buscar música"> -->
+        <button class="btn btn-outline-success" type="submit" >Search</button>
+      </form>
+    </div>
+  </div>
+</nav>

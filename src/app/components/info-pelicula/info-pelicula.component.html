@@ -1,0 +1,37 @@
+<div class="container col-8 mt-4">
+  <div class="d-flex mt-3" *ngIf="isMovie">
+    <div class="col-6">
+      <img src="{{movie.posterURLs.original}}" alt="Poster de la Película" class="img-fluid" width="">
+    </div>
+    <div class="col-6 mx-2">
+      <h2>{{movie.title}}</h2>
+      <p><strong>Tipo:</strong> {{movie.type}}</p>
+      <p><strong>Año:</strong> <span>{{movie.year}}</span></p>
+      <p><strong>Director:</strong> <span *ngFor="let d of movie.directors">{{d + " "}}</span></p>
+      <p><strong>Actores:</strong> <span *ngFor="let actor of movie.cast">{{actor + " "}}</span></p>
+      <p><strong>Género:</strong> <span *ngFor="let gen of movie.genres">{{gen.name + " "}}</span></p>
+      <p><strong>Sinopsis:</strong> {{movie.overview}}</p>
+    </div>
+  </div>
+  <div class="d-flex mt-3" *ngIf="!isMovie">
+    <div class="col-6">
+      <img src="{{movie.posterURLs.original}}" alt="Poster de la Película" class="img-fluid" >
+    </div>
+    <div class="col-6 mx-2">
+      <h2>{{movie.title}}</h2>
+      <p><strong>Titulo Original:</strong> {{movie.originalTitle}}</p>
+      <p><strong>Primer año al aire:</strong> <span>{{movie.firstAirYear}}</span></p>
+      <p><strong>Ultimo año al aire:</strong> <span>{{movie.lastAirYear}}</span></p>
+      <p><strong>Director:</strong> <span *ngFor="let d of movie.creators">{{d + " "}}</span></p>
+      <p><strong>Actores:</strong> <span *ngFor="let actor of movie.cast">{{actor + " "}}</span></p>
+      <p><strong>Género:</strong> <span *ngFor="let gen of movie.genres">{{gen.name + " "}}</span></p>
+      <p><strong>Sinopsis:</strong> {{movie.overview}}</p>
+      <p><strong>Cantidad de Temporadas:</strong> {{movie.seasonCount}}</p>
+      <p><strong>Cantidad de Episodios:</strong> {{movie.episodeCount}}</p>
+    </div>
+  </div>
+</div>
+
+<div class="container d-flex align-items-center col-8 my-4">
+  <iframe width="100%" height="400" [src]="safeVideoUrl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>

@@ -1,0 +1,22 @@
+<p class="h5 text-center my-3">Solo busca y muestra la portada y titulo de la pelicula/serie</p>
+<div class="container col-6 mt-4">
+  <form class="row g-3 mx-auto" style="max-width: 400px;">
+    <div class="col-8">
+      <input name="moviesByTitle" [(ngModel)]="searchTerm" class="form-control" placeholder="Buscar" type="text">
+    </div>
+    <div class="col-4">
+      <button type="submit" class="btn btn-success w-100" (click)="searchMovies()"><i class="bi bi-search me-2"></i>Buscar</button>
+    </div>
+  </form>
+</div>
+<div class="container-fluid row justify-content-center">
+  <main class="col-lg-8 col-md-12 col-sm-12 row justify-content-center mt-2">
+      <h2 class="text-center">Resultados de la busqueda: {{searchTerm}}</h2>
+      <div *ngFor="let m of movies" class="card col-3 col-md-6 col-sm-12 align-content-center m-2 music-link" style="width: 16rem;">
+        <img src="{{m.Poster}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{m.Title}}</h5>
+        </div>
+    </div>
+  </main>
+</div>

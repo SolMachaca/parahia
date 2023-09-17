@@ -1,0 +1,134 @@
+<div class="bg-success col-6 mt-3 p-1" style="margin: 0 auto;">
+  <p class="text-center" >Frase del Dia: {{phrase}}</p>
+</div>
+
+
+<main class="container-fluid">
+  <div class="container d-flex flex-column">
+      <div class="row">
+          <h2 class="text-center p-3">Los Signos del Zodiaco</h2>
+          <div class="d-flex flex-column col-lg-3 col-md-4 col-sm-6 col-6 text-center mt-4">
+              <div class="p-3">
+                  <img src="assets/img/zodiaco/aries.png" width="150px" alt="">
+              </div>
+              <div class="pb-3">
+                  <button class="btn btn-outline-success text-center w-50" href="#" (click)="obtenerHoroscopo('aries')" role="button">Aries</button>
+              </div>
+          </div>
+          <div class="d-flex flex-column col-lg-3 col-md-4 col-sm-6 col-6 text-center mt-4">
+              <div class="p-3">
+                  <img src="assets/img/zodiaco/tauro.png" width="150px" alt="">
+              </div>
+              <div class="pb-3">
+                  <button class="btn btn-outline-success text-center w-50" href="#" (click)="obtenerHoroscopo('touro')" role="button">Tauro</button>
+              </div>
+          </div>
+          <div class="d-flex flex-column col-lg-3 col-md-4 col-sm-6 col-6 text-center mt-4">
+              <div class="p-3">
+                  <img src="assets/img/zodiaco/geminis.png" width="150px" alt="">
+              </div>
+              <div class="pb-3">
+                  <button class="btn btn-outline-success text-center w-50" href="#" (click)="obtenerHoroscopo('gemeos')" role="button">Geminis</button>
+              </div>
+          </div>
+          <div class="d-flex flex-column col-lg-3 col-md-4 col-sm-6 col-6 text-center mt-4">
+              <div class="p-3">
+                  <img src="assets/img/zodiaco/cancer.png" width="150px" alt="">
+              </div>
+              <div class="pb-3">
+                  <button class="btn btn-outline-success text-center w-50" href="#" (click)="obtenerHoroscopo('cancer')" role="button">Cancer</button>
+              </div>
+          </div>
+          <div class="d-flex flex-column col-lg-3 col-md-4 col-sm-6 col-6 text-center mt-4">
+              <div class="p-3">
+                  <img src="assets/img/zodiaco/leo.png" width="150px" alt="">
+              </div>
+              <div class="pb-3">
+                  <button class="btn btn-outline-success text-center w-50" href="#" (click)="obtenerHoroscopo('euleio')" role="button">Leo</button>
+              </div>
+          </div>
+          <div class="d-flex flex-column col-lg-3 col-md-4 col-sm-6 col-6 text-center mt-4">
+              <div class="p-3">
+                  <img src="assets/img/zodiaco/virgo.png" width="150px" alt="">
+              </div>
+              <div class="pb-3">
+                  <button class="btn btn-outline-success text-center w-50" href="#" (click)="obtenerHoroscopo('virgem')" role="button">Virgo</button>
+              </div>
+          </div>
+          <div class="d-flex flex-column col-lg-3 col-md-4 col-sm-6 col-6 text-center mt-4">
+              <div class="p-3">
+                  <img src="assets/img/zodiaco/libra.png" width="150px" alt="">
+              </div>
+              <div class="pb-3">
+                  <button class="btn btn-outline-success text-center w-50" href="#" (click)="obtenerHoroscopo('libra')" role="button">Libra</button>
+              </div>
+          </div>
+          <div class="d-flex flex-column col-lg-3 col-md-4 col-sm-6 col-6 text-center mt-4">
+              <div class="p-3">
+                  <img src="assets/img/zodiaco/scorpio.png" width="150px" alt="">
+              </div>
+              <div class="pb-3">
+                  <button class="btn btn-outline-success text-center w-50" href="#" (click)="obtenerHoroscopo('escorpiao')" role="button">Escorpio</button>
+              </div>
+          </div>
+          <div class="d-flex flex-column col-lg-3 col-md-4 col-sm-6 col-6 text-center mt-4">
+              <div class="p-3">
+                  <img src="assets/img/zodiaco/sagittarius.png" width="150px" alt="">
+              </div>
+              <div class="pb-3">
+                  <button class="btn btn-outline-success text-center w-50" href="#" (click)="obtenerHoroscopo('sagitário')" role="button">Sagitario</button>
+              </div>
+          </div>
+          <div class="d-flex flex-column col-lg-3 col-md-4 col-sm-6 col-6 text-center mt-4">
+              <div class="p-3">
+                  <img src="assets/img/zodiaco/capricorn.png" width="150px" alt="">
+              </div>
+              <div class="pb-3">
+                  <button class="btn btn-outline-success text-center w-50" href="#" (click)="obtenerHoroscopo('capricornio')" role="button">Capricornio</button>
+              </div>
+          </div>
+          <div class="d-flex flex-column col-lg-3 col-md-4 col-sm-6 col-6 text-center mt-4">
+              <div class="p-3">
+                  <img src="assets/img/zodiaco/aquarium.png" width="150px" alt="">
+              </div>
+              <div class="pb-3">
+                  <button class="btn btn-outline-success text-center w-50" href="#" (click)="obtenerHoroscopo('aquario')" role="button">Acuario</button>
+              </div>
+          </div>
+          <div class="d-flex flex-column col-lg-3 col-md-4 col-sm-6 col-6 text-center mt-4">
+              <div class="p-3">
+                  <img src="assets/img/zodiaco/pisces.png" width="150px" alt="">
+              </div>
+              <div class="pb-3">
+                  <button class="btn btn-outline-success text-center w-50" href="#" (click)="obtenerHoroscopo('peixes')" role="button">Picis</button>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="container" *ngIf="band">
+      <div class="col-12 mt-3 mb-3">
+          <h4 class="h2 bg-success p-3 text-white">{{title}}</h4>
+          <div class="d-flex justify-content-center p-3">
+              <article class="col-8">
+                  <!-- <h4>Aries</h4> -->
+                  <p class="">{{text}}</p>
+              </article>
+              <div class="col-4 text-center">
+                  <img src="assets/img/zodiaco/{{imgSrc}}" width="150px" alt="">
+              </div>
+          </div>
+      </div>
+      <!-- <div class="col-12 mt-3 mb-3">
+          <h4 class="h2 bg-success p-3 text-white">Libra - Mes</h4>
+          <div class="d-flex justify-content-center p-3">
+              <article class="col-8">
+                  <h4>Sagitario</h4>
+                  <p class="">Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, rerum? Recusandae nostrum vitae, corporis voluptatum optio consequatur harum, tempore, dicta corrupti accusantium maiores libero officia obcaecati laudantium assumenda eaque doloribus!. Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, maxime porro accusamus iusto, officiis quia unde hic reiciendis ipsa animi eius possimus natus! Nesciunt, harum vitae aut enim recusandae aperiam.</p>
+              </article>
+              <div class="col-4 text-center">
+                  <img src="assets/img/zodiaco/sagittarius.png" width="150px" alt="">
+              </div>
+          </div>
+      </div> -->
+  </div>
+</main>

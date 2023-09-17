@@ -1,0 +1,42 @@
+<p class="h5 text-center my-3">Busca y muestra la pordata y titulo de la pelicula/serie. Ademas con el boton redirige a una nueva vista con mas informacion de la misma</p>
+<div class="container">
+  <form class="row g-3 mx-auto" style="max-width: 400px;">
+    <div class="col-8">
+      <input name="moviesByTitle" [(ngModel)]="searchTitle" class="form-control" placeholder="Buscar" type="text">
+    </div>
+    <div class="col-4">
+      <button type="submit" class="btn btn-success w-100" (click)="busquedaPorTitulo()"><i class="bi bi-search me-2"></i>Buscar</button>
+    </div>
+  </form>
+</div>
+
+
+<div class="container-fluid row justify-content-center">
+  <main class="col-lg-8 col-md-12 col-sm-12 row justify-content-center mt-2">
+    <h2 class="text-center">Resultados de la busqueda: {{searchTitle}}</h2>
+    <div *ngFor="let movie of moviesByTitle" class="card col-3 col-md-6 col-sm-12 align-content-center m-2 music-link"
+      style="width: 16rem;">
+      <!-- Por aca al momento de hacer el ngFor tenes que ubicarte en uno de los array. Quedaria algo asi: -->
+      <!-- <div *ngFor="let item of contenedor.results></div> -->
+      <!-- aca recorreria y mostraria todos los objetos del result -->
+      <img src="{{movie.posterURLs.original}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{movie.title}}</h5>
+      </div>
+      <a type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="verDetallesPelicula(movie)">
+        Mas Informacion
+      </a>
+    </div>
+
+  </main>
+</div>
+
+<!-- <div class="container d-flex">
+  <a class="d-flex align-items-center mx-3" style="background-color: #030328; height: 50px; padding: 5px; text-decoration: none;">
+    <img src="assets/img/icons/hbo-max.svg" alt="HBO Max" width="150px">
+  </a>
+  <a class="d-flex align-items-center bg-black" style="text-decoration: none; padding: 10px; height: 50px;">
+    <img src="assets/img/icons/netflix.png" alt="Netflix" width="140px">
+  </a>
+</div> -->
+

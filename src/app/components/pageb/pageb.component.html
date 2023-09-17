@@ -1,0 +1,104 @@
+
+<div class="container-fluid row mt-3 justify-content-center">
+  <div class="col-lg-8  col-md-8 col-sm-12">
+      <div class="table-responsive">
+          <table class="table table-hover col-12 table-dark">
+              <thead>
+                  <tr>
+                      <th scope="col"></th>
+                      <th scope="col"></th>
+                      <th scope="col" class="text-center"><img src="assets/img/icons/estados-unidos.png" class="flag-ico" alt=""><br>USD</th>
+                      <th scope="col" class="text-center"><img src="assets/img/icons/union-europea.png" class="flag-ico" alt=""><br>EUR</th>
+                      <th scope="col" class="text-center"><img src="assets/img/icons/reino-unido.png" class="flag-ico" alt=""><br>GBP</th>
+                      <th scope="col" class="text-center"><img src="assets/img/icons/australia.png" class="flag-ico" alt=""><br>AUD</th>
+                      <th scope="col" class="text-center"><img src="assets/img/icons/bitcoin.png" class="flag-ico" alt=""><br>BTC</th>
+                      <th scope="col" class="text-center"><img src="assets/img/icons/argentina.png" class="flag-ico" alt=""><br>ARS</th>
+                  </tr>
+              </thead>
+              <tbody class="table-group-divider">
+                  <tr class="text-center lh-base">
+                      <th scope="row"><img src="img/icons/estados-unidos.png" class="flag-ico" alt=""></th>
+                      <td>1 USD <br>Inverse</td>
+                      <td>1,000000 <br>1,000000</td>
+                      <td>0,919901 <br>1.087074</td>
+                      <td>0,811469 <br>1.232332</td>
+                      <td>1,619885 <br>0,617328</td>
+                      <td>0,000140 <br>7148,757</td>
+                      <td>64,87725 <br>0,015414</td>
+                  </tr>
+                  <tr class="text-center lh-base">
+                      <th scope="row"><img src="img/icons/union-europea.png" class="flag-ico" alt=""></th>
+                      <td>1 EUR <br>Inverse</td>
+                      <td>1,087074 <br>0,919901</td>
+                      <td>1,000000 <br>1,000000</td>
+                      <td>0,882127 <br>1,133623</td>
+                      <td>1,760936 <br>0,567880</td>
+                      <td>0,000152 <br>6576,146</td>
+                      <td>70,52637 <br>0,014179</td>
+                  </tr>
+                  <tr class="text-center lh-base">
+                      <th scope="row"><img src="img/icons/reino-unido.png" class="flag-ico" alt=""></th>
+                      <td>1 GBP <br>Inverse</td>
+                      <td>1,232332 <br>0,811469</td>
+                      <td>1,133623 <br>0,882127</td>
+                      <td>1,000000 <br>1,000000</td>
+                      <td>1,996238 <br>0,500942</td>
+                      <td>0,000172 <br>5800,977</td>
+                      <td>79,95034 <br>0,012508</td>
+                  </tr>
+                  <tr class="text-center lh-base">
+                      <th scope="row"><img src="img/icons/russia.png" class="flag-ico" alt=""></th>
+                      <td>1 RUB <br>Inverse</td>
+                      <td>0,013226 <br>75,61134</td>
+                      <td>0,012166 <br>86,19511</td>
+                      <td>0,010732 <br>93,17830</td>
+                      <td>0,021424 <br>16,67696</td>
+                      <td>0,000002 <br>540527,1</td>
+                      <td>0,858036 <br>1,165452</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+
+  </div>
+  <form class="col-lg-4 col-md-4 bg-primary text-white p-3 d-sm-none d-md-block
+  d-none d-sm-block">
+      <div class="">
+          <h3 class="text-center">Conversor de Divisas</h3>
+      </div>
+      <div class="mb-3">
+          <label for="cantidad" class="form-label">Cantidad</label>
+          <input type="text" name="cant" [(ngModel)]="cant" class="form-control" id="cantidad" placeholder="$">
+      </div>
+      <div class="mb-3">
+          <label for="de" class="form-label">De: </label>
+          <select [(ngModel)]="fromType" name="fromType" class="form-select" aria-label="Default select example">
+              <option selected>Eleigr Moneda</option>
+              <option value="USD">(USD) Dolares EEUU</option>
+              <option value="EUR">(EUR) EURO</option>
+              <option value="GBP">(GBP) Libra Esterlina</option>
+              <option value="AUD">(AUD) Dolar Australiano</option>
+              <option value="BTC">(BTC) Bitcoin</option>
+              <option value="ARS">(ARS) Peso Argentino</option>
+
+            </select>
+      </div>
+      <div class="mb-3">
+          <label for="de" class="form-label">A: </label>
+          <select class="form-select" name="toType" [(ngModel)]="toType" aria-label="Default select example">
+              <option selected>Eleigr Moneda</option>
+              <option value="USD">(USD) Dolares EEUU</option>
+              <option value="EUR">(EUR) EURO</option>
+              <option value="GBP">(GBP) Libra Esterlina</option>
+              <option value="AUD">(AUD) Dolar Australiano</option>
+              <option value="BTC">(BTC) Bitcoin</option>
+              <option value="ARS">(ARS) Peso Argentino</option>
+
+            </select>
+      </div>
+      <div class="mb-3">
+          <input type="number" class="form-control" id="cantidad" placeholder="$ {{finalResult}}">
+      </div>
+      <button type="button" (click)="convertirMoneda()" class="btn btn-success">Convertir <i class="bi bi-arrow-right"></i></button>
+  </form>
+</div>

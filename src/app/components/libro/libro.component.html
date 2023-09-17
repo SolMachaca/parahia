@@ -1,0 +1,67 @@
+<div class="container">
+  <form>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Buscar Libro: </label>
+      <input type="email" [(ngModel)]="buscado" name="buscado" class="form-control" id="exampleInputEmail1"
+        aria-describedby="emailHelp">
+    </div>
+    <button type="submit" (click)="buscarLibro()" class="btn btn-primary">Buscar</button>
+  </form>
+</div>
+
+<div class="container">
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th scope="col">ID Book</th>
+        <th scope="col">Titulo del Libro</th>
+        <th scope="col">Tapa imagen</th>
+        <th scope="col">Autores Lista</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let l of libro">
+        <th scope="row">
+
+
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            {{l.book_id}}
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">{{l.name}}</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  {{l.name}}
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </th>
+        <td class="mod">{{l.name}}</td>
+        <td>
+          <img src="{{l.cover}}" alt="imagen del libro">
+        </td>
+        <td *ngFor="let autor of l.authors">{{autor}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<input [(ngModel)]="searchTerm" placeholder="Search book">
+<button (click)="searchBooks()">Search</button>
+<ul class="">
+  <li *ngFor="let book of books">{{ book.title }}</li>
+</ul>
